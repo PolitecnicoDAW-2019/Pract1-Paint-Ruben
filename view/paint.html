@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <title>Paint</title>
+  </head>
+  <body style="background-color: #B52727;">
+    <div id="root">
+      <div id="pageTitle" style="text-align: center;">
+        <h1
+          class="display-3"
+          style="color: #ffc107; font-family: Impact; text-shadow: 2px 0 0 #000"
+        >
+          SPAINT
+        </h1>
+      </div>
+      <div class="row" style="width: 100%;">
+        <div class="col" style="margin-top: 1%; margin-left: 1%;">
+          <div id="canvasDiv">
+            <canvas
+              id="canvas"
+              width="1000"
+              height="500"
+              style="background-color: white; border: 4px solid black; cursor: crosshair;"
+            ></canvas>
+          </div>
+        </div>
+        <div class="col col-lg-3" style="margin-top: 1%; margin-right: 5%;">
+          <div id="tools">
+            <div
+              class="btn-group-vertical"
+              style="display: flex; justify-content: center;"
+            >
+              <button
+                id="square"
+                type="button"
+                class="btn btn-warning"
+                style="border: 3px solid black;"
+              >
+                Square
+              </button>
+              <button
+                id="circle"
+                type="button"
+                class="btn btn-warning"
+                style="border: 3px solid black;"
+              >
+                Circle
+              </button>
+              <button
+                id="triangle"
+                type="button"
+                class="btn btn-warning"
+                style="border: 3px solid black;"
+              >
+                Triangle
+              </button>
+              <button
+                id="free"
+                type="button"
+                class="btn btn-warning"
+                style="border: 3px solid black;"
+              >
+                Free
+              </button>
+              <div class="input-group mb-3"></div>
+              <div class="input-group mb-3" style="border: 3px solid black;">
+                <div class="input-group-prepend">
+                  <button id="text" class="btn btn-warning" type="button">
+                    Text
+                  </button>
+                </div>
+                <input
+                  type="text"
+                  id="textInput"
+                  class="form-control"
+                  placeholder=""
+                  aria-label=""
+                  aria-describedby="basic-addon1"
+                />
+                <div class="input-group-prepend">
+                  <button id="gradient" class="btn btn-warning" type="button">
+                    Gradient
+                  </button>
+                </div>
+              </div>
+              <div class="input-group mb-3" style="border: 3px solid black;">
+                <div class="input-group-prepend">
+                  <button id="image" class="btn btn-warning" type="button">
+                    Image
+                  </button>
+                </div>
+                <div class="custom-file">
+                  <input
+                    type="file"
+                    class="custom-file-input"
+                    id="imageInput"
+                  />
+                  <label class="custom-file-label" for="inputGroupFile03"
+                    >Choose file</label
+                  >
+                </div>
+              </div>
+              <div style="width: 100%;">
+                <img
+                  style="display: block; margin: 0 auto; width: 200px; height: auto;"
+                  id="imagePreview"
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Spain.svg/1200px-Flag_of_Spain.svg.png"
+                />
+              </div>
+              <input
+                type="color"
+                id="fillColor"
+                value="#e66465"
+                style="width: 100%; background-color: #ffc107; border: 3px solid black;"
+              />
+              <button
+                id="clear"
+                type="button"
+                class="btn btn-warning"
+                style="border: 3px solid black;"
+              >
+                Clear
+              </button>
+              <button
+                id="export"
+                type="button"
+                class="btn btn-warning"
+                style="border: 3px solid black;"
+              >
+                Export
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="./paintView.js"></script>
+  <script src="../aPP.js"></script>
+</html>
